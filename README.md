@@ -29,11 +29,11 @@ This project implements a robust authentication and authorization system for an 
 
 | Technology | Description |
 |------------|-------------|
-| <img **Spring Boot** | Main framework for REST API development |
-| <img **Spring Security** | Authentication and authorization |
-| <img **JPA (Hibernate)** | ORM for database persistence |
-| <img **MySQL** | Relational database |
-| <img **JWT** | Token-based stateless authentication |
+| **Spring Boot** | Main framework for REST API development |
+| **Spring Security** | Authentication and authorization |
+| **JPA (Hibernate)** | ORM for database persistence |
+| **MySQL** | Relational database |
+| **JWT** | Token-based stateless authentication |
 
 ---
 
