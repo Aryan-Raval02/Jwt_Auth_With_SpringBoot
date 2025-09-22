@@ -32,11 +32,17 @@ public class ServiceConfig
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/authenticate/**").permitAll()
+                        .requestMatchers(
+                                "/my-ui.html",
+                                "/swagger-ui/**",
+                                "/v3/api-docs/**",
+                                "/swagger-resources/**",
+                                "/webjars/**"
+                        ).permitAll()
                         .requestMatchers("/seller/new/**").permitAll()
                         .requestMatchers("/logout/**").hasAnyRole("SELLER","ADMIN")
                         .requestMatchers("/seller/**").hasRole("SELLER")
                         .requestMatchers("/products/**").hasRole("SELLER")
-                        .requestMatchers("/swagger-ui.html").permitAll()
                         .requestMatchers("/admin/new/**").permitAll()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
